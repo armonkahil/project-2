@@ -7,7 +7,9 @@
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "test": "npm run lint && cross-env NODE_ENV=test mocha -u bdd --reporter spec --exit"
+    "test": "npm run lint && cross-env NODE_ENV=test mocha -u bdd --reporter spec --exit",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "license": "ISC",
   "dependencies": {
@@ -30,7 +32,8 @@
     "sequelize": "^5.21.4",
     "sequelize-auto": "^0.4.29",
     "sequelize-cli": "^5.5.1",
-    "youtube-search": "^1.1.4"
+    "youtube-search": "^1.1.4",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -59,5 +62,6 @@
   "bugs": {
     "url": "https://github.com/lizharris90210/project-2/issues"
   },
-  "homepage": "https://github.com/lizharris90210/project-2#readme"
+  "homepage": "https://github.com/lizharris90210/project-2#readme",
+  "snyk": true
 }
